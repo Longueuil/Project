@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../../css/styles2.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+    <div class="navbar">
+   <a class="active" href="../../newStart_page.html">Home</a>
+  <a href="../../about_us.html">About us</a>
+  <a href="../../logout.jsp">LogOut</a>
+  <a href="../../contact_us.html">Contact us</a>
+  <a href="../../programs.html">Programs</a>
+</div>
+    
+<form action="updateStudentServlet" method="post">
+  <div class="container">
+    <h1>Edit student information</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="firstName"><b>First name</b></label>
+    <input type="text" name="firstName" class="form-control" placeholder="First Name" maxlength="20" required>
+
+    <label for="lastName"><b>Last name</b></label>
+    <input type="text" name="lastName" class="form-control" placeholder="Last Name" maxlength="20" required>
+
+    <label for="address"><b>Address</b></label>
+    <input type="text" name="ADDRESS" class="form-control" placeholder="Address" maxlength="20" required>
+    
+    <label for="city"><b>City</b></label>
+    <input type="text" name="CITY" class="form-control" placeholder="City" maxlength="20" required>
+
+    <label for="country"><b>Country</b></label>
+    <input type="text" name="COUNTRY" class="form-control" placeholder="Country" maxlength="20" required>
+
+    <label for="phoneNumber"><b>Phone number</b></label>
+    <input type="text" name="PHONE_NUMBER" class="form-control" placeholder="Phone number" maxlength="30" required>
+    
+    <label for="USERNAME"><b>Username*</b></label>
+    <input type="text" name="USERNAME" class="form-control" placeholder="Username*" maxlength="15" required>
+    
+    <label for="courseID"><b>Course ID</b></label>
+    <input type="number" name="COURSE_ID" class="form-control" placeholder="Course ID" maxlength="15" required min="1" max="10">
+    <br><br>
+       
+    <hr>
+    
+*Can't be updated
+    <button type="submit" class="registerbtn">Update</button>
+    
+  </div>
+  
+  
+</form>
+
+</body>
+</html>

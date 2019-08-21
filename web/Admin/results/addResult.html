@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../css/styles2.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="active" href="../../newStart_page.html">Home</a>
+            <a href="../../about_us.html">About us</a>
+            <a href="../../logout.jsp">LogOut</a>
+            <a href="../../contact_us.html">Contact us</a>
+            <a href="../../programs.html">Programs</a>
+        </div>
+
+        <form action="addResultServlet" method="post">
+            <div class="container">
+                <h1>Register new result</h1>
+                <p>Please fill in this form to create an result.</p>
+                <hr>
+
+                <label for="MARK"><b>Mark</b></label>
+                <input type="number" name="MARK" class="form-control" placeholder="Mark" required  min="1" max="10">
+                <br><br>
+                <label for="TEACHER_USERNAME"><b>Teacher username</b></label>
+                <input type="text" name="TEACHER_USERNAME" class="form-control" placeholder="Teacher username" required maxlength="15">
+
+                <label for="STUDENT_USERNAME"><b>Student username</b></label>
+                <input type="text" name="STUDENT_USERNAME" class="form-control" placeholder="Student username" required maxlength="15">   
+
+                <label for="COURSE_NAME"><b>Course name</b></label>
+                <input type="text" name="COURSE_NAME" class="form-control" placeholder="Course name" required maxlength="15">
+                * If the course with student username exist, it will not be created
+                <button type="submit" class="registerbtn">Register</button>
+
+            </div>
+
+
+        </form>
+
+    </body>
+</html>

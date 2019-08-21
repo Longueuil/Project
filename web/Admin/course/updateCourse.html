@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../../css/styles2.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="navbar">
+   <a class="active" href="../../newStart_page.html">Home</a>
+  <a href="../../about_us.html">About us</a>
+  <a href="../../logout.jsp">LogOut</a>
+  <a href="../../contact_us.html">Contact us</a>
+  <a href="../../programs.html">Programs</a>
+</div>
+    
+<form action="updateCoursetServlet" method="post">
+  <div class="container">
+    <h1>Update course information</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+        
+   <label for="COURSE_NAME"><b>Course name</b></label>
+                <input type="text" name="COURSE_NAME" class="form-control" placeholder="Course name" required maxlength="30">
+
+                <label for="TEACHER_USERNAME"><b>Teacher username*</b></label>
+                <input type="text" name="TEACHER_USERNAME" class="form-control" placeholder="Teacher username*" required maxlength="15">
+
+                <label for="STUDENT_USERNAME"><b>Student username</b></label>
+                <input type="text" name="STUDENT_USERNAME" class="form-control" placeholder="Student username" required maxlength="15">
+   
+                <label for="COURSE_ID"><b>Course ID</b></label>
+                <input type="number" name="COURSE_ID" class="form-control" placeholder="Course ID" required maxlength="15" min="1" max="10">
+
+                <label for="CREDIT"><b>Credits</b></label>
+                <input type="number" name="CREDIT" class="form-control" placeholder="Credits" required maxlength="15" min="1" max="10">
+                <br>                <br>
+    * Can't be updated
+
+    <button type="submit" class="registerbtn">Update</button>
+    
+  </div>
+  
+  
+</form>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="video/video.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>Welcome</h1>
+  <p>Montreal College of Information Technology is a pioneer institution focused on delivering fast-paced, 
+      intensive IT programs. Our main focus on designing up-to-date programs in information technology, 
+      since our inception in 2006, makes us stand out from our counterparts. 
+      One of the best feature about us is that we are located in the heart of downtown.
+
+Scores of successful candidates can talk about us. Our industry-relevant, 
+continuously updated curriculum is designed to bridge the gap between outdated workforce skills and job market requirements.
+As a result, a competent and professional job ready workforce is formed.</p>
+  
+  <button id="myBtn" onclick="window.location.href='newStart_page.html'">Start your travel</button>
+  
+</div>
+</body>
+</html>
+

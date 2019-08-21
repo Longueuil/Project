@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../css/styles2.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="active" href="../../newStart_page.html">Home</a>
+            <a href="../../about_us.html">About us</a>
+            <a href="../../logout.jsp">LogOut</a>
+            <a href="../../contact_us.html">Contact us</a>
+            <a href="../../programs.html">Programs</a>
+        </div>
+
+        <form action="addStudentServlet" method="post">
+            <div class="container">
+                <h1>Register new student</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+
+                <label for="firstName"><b>First name</b></label>
+                <input type="text" name="firstName" class="form-control" placeholder="First Name" required maxlength="30">
+
+                <label for="lastName"><b>Last name</b></label>
+                <input type="text" name="lastName" class="form-control" placeholder="Last Name" required maxlength="30">
+
+                <label for="address"><b>Address</b></label>
+                <input type="text" name="ADDRESS" class="form-control" placeholder="Address" required maxlength="30">
+
+                <label for="city"><b>City</b></label>
+                <input type="text" name="CITY" class="form-control" placeholder="City" required maxlength="20">
+
+                <label for="country"><b>Country</b></label>
+                <input type="text" name="COUNTRY" class="form-control" placeholder="Country" required maxlength="20">
+
+                <label for="phoneNumber"><b>Phone number</b></label>
+                <input type="text" name="PHONE_NUMBER" class="form-control" placeholder="Phone number" required maxlength="10">
+
+                <label for="TEACHER_USERNAME"><b>Teacher userName</b></label>
+                <input type="text" name="TEACHER_USERNAME" class="form-control" placeholder="Teacher userName" required maxlength="20">
+
+                <label for="username"><b>Username</b></label>
+                <input type="text" name="Username" class="form-control" placeholder="Username" required maxlength="15">
+
+                <label for="password"><b>Password</b></label>
+                <input type="text" name="Password" class="form-control" placeholder="Password" required maxlength="15">
+
+                <label for="courseID"><b>Course ID</b></label>
+                <input type="number" name="COURSE_ID" class="form-control" placeholder="Course ID" required maxlength="38" min="1" max="10">
+                <br><br>
+                * If the username exist, it will not be created
+                <button type="submit" class="registerbtn">Register</button>
+
+            </div>
+
+
+        </form>
+
+    </body>
+</html>

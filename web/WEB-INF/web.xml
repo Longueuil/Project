@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>intro.html</welcome-file>
+    </welcome-file-list>
+    
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/newLoginPage.html</form-login-page>
+            <form-error-page>/error.html</form-error-page>
+        </form-login-config>
+    </login-config>
+    
+    <security-role>
+        <role-name>admin</role-name>
+    </security-role>
+    <security-role>
+        <role-name>student</role-name>
+    </security-role>
+    <security-role>
+        <role-name>teacher</role-name>
+    </security-role>
+    
+    <!-- Access to the pages-->
+
+       
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Users</web-resource-name>
+            <url-pattern>/newStart_Page.html</url-pattern>
+            <url-pattern>/newMainMenu.html</url-pattern>
+            <url-pattern>/newLoginPage.html</url-pattern>
+            <http-method>GET</http-method>            
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>student</role-name> 
+            <role-name>teacher</role-name>  
+            <role-name>admin</role-name>         
+        </auth-constraint>
+    </security-constraint>
+   
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>admin</web-resource-name>
+            <url-pattern>/Admin/students/addStudent.html</url-pattern>
+            <url-pattern>/Admin/students/updateStudent.html</url-pattern>
+            <url-pattern>/Admin/students/deleteStudent.html</url-pattern>
+            <url-pattern>/empView.jsp</url-pattern>  
+            <url-pattern>/Admin/course/addCourse.html</url-pattern>
+            <url-pattern>/Admin/course/updateCourse.html</url-pattern>
+            <url-pattern>/Admin/course/deleteCourse.html</url-pattern>
+            <url-pattern>/courseView.jsp</url-pattern> 
+            <url-pattern>/Admin/results/addResult.html</url-pattern>
+            <url-pattern>/Admin/results/deleteResult.html</url-pattern>
+            <url-pattern>/Admin/results/updateResult.html</url-pattern>
+            <url-pattern>/resultView.jsp</url-pattern> 
+            <url-pattern>/Admin/teachers/addTeacher.html</url-pattern>
+            <url-pattern>/Admin/teachers/deleteTeacher.html</url-pattern>
+            <url-pattern>/Admin/teachers/updateTeacher.html</url-pattern>
+            <url-pattern>/teachView.jsp</url-pattern> 
+            <http-method>GET</http-method>            
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>         
+        </auth-constraint>
+    </security-constraint>
+  
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>teacher</web-resource-name>
+            <url-pattern>/Admin/students/addStudent.html</url-pattern>
+            <url-pattern>/Admin/students/updateStudent.html</url-pattern>
+            <url-pattern>/empView.jsp</url-pattern> 
+            <url-pattern>/Admin/course/addCourse.html</url-pattern>
+            <url-pattern>/Admin/course/updateCourse.html</url-pattern>
+            <url-pattern>/courseView.jsp</url-pattern>
+            <url-pattern>/Admin/results/addResult.html</url-pattern>
+            <url-pattern>/Admin/results/updateResult.html</url-pattern>
+            <url-pattern>/resultView.jsp</url-pattern> 
+            <http-method>GET</http-method>            
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>teacher</role-name>         
+        </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>student</web-resource-name>
+            <url-pattern>/resultView.jsp</url-pattern> 
+            <http-method>GET</http-method>            
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>student</role-name>         
+        </auth-constraint>
+    </security-constraint>
+  
+</web-app>
